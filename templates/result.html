@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR Results</title>
+</head>
+<body>
+    <h1>OCR Results</h1>
+    <div>
+        {% if extracted_text %}
+        <table>
+            <tr>
+                <th>Page</th>
+                <th>Text</th>
+            </tr>
+            {% for data in extracted_text %}
+            <tr>
+                <td>{{ data['Page'] }}</td>
+                <td>{{ data['Text'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% if download_link %}
+        <a href="{{ download_link }}"><button>Download Excel</button></a>
+        {% endif %}
+        {% else %}
+        <p>No OCR results to display.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

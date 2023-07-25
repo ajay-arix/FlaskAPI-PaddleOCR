@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload PDF File</title>
+</head>
+<body>
+    <h1>Upload PDF File</h1>
+    <form action="/ocr" method="post" enctype="multipart/form-data">
+        <label for="pdf_file">Select PDF File:</label>
+        <input type="file" id="pdf_file" name="file" accept=".pdf">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
